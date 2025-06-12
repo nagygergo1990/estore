@@ -6,6 +6,7 @@ import {
   faHeart,
   faShoppingCart,
 } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-header',
   imports: [FontAwesomeModule],

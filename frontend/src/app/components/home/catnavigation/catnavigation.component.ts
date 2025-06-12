@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-catnavigation',
   imports: [],
   templateUrl: './catnavigation.component.html',
-  styleUrl: './catnavigation.component.css'
+  styleUrl: './catnavigation.component.css',
 })
-export class CatnavigationComponent {
-
-}
+export class CatnavigationComponent {}
