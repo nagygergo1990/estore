@@ -5,10 +5,11 @@ import { RatingsComponent } from '../ratings/ratings.component';
 import { ProductsStoreItem } from '../home/services/product/products.storeItem';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBoxOpen } from '@fortawesome/free-solid-svg-icons';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-products',
-  imports: [CommonModule, RatingsComponent, FontAwesomeModule],
+  imports: [CommonModule, RatingsComponent, FontAwesomeModule, RouterLink],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
   providers: [ProductsService],
