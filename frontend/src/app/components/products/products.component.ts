@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
-import { ProductsService } from './products.service';
-import { ProductListItem } from './products.type';
+import { ProductsService } from '../home/services/product/products.service';
 import { CommonModule } from '@angular/common';
 import { RatingsComponent } from '../ratings/ratings.component';
+import { ProductsStoreItem } from '../home/services/product/products.storeItem';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faBoxOpen } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-products',
-  imports: [CommonModule, RatingsComponent],
+  imports: [CommonModule, RatingsComponent, FontAwesomeModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
   providers: [ProductsService],
 })
 export class ProductsComponent {
-  products: ProductListItem[] = [];
-
-  constructor(productsService: ProductsService) {
-    this.products = productsService.getProductsList();
-  }
+  faBoxOpen = faBoxOpen;
+  constructor(public productsStoreItem: ProductsStoreItem) {}
 }

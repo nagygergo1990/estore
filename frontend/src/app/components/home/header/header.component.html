@@ -9,17 +9,21 @@
     class="p-0 w-[50%] h-[2.5rem] bg-white flex items-center rounded-md overflow-hidden"
   >
     <select
+      #categoryOptions
       class="w-auto bg-gray-300 h-full border-none font-semibold px-2 pr-5"
     >
-      <option>Men</option>
-      <option>Women</option>
-      <option>Kids</option>
+      @for (category of categoryStore.topLevelCategories(); track $index) {
+
+      <option [value]="category.id">{{ category.category }}</option>
+      }
     </select>
     <input
+      #keyword
       class="w-full h-full border-none outline-none px-3"
       placeholder="Search..."
     />
     <button
+      (click)="onClickSearch(keyword.value, categoryOptions.value)"
       class="w-[10%] h-full border-none bg-gray-300 flex justify-center items-center"
     >
       <fa-icon [icon]="faSearch"></fa-icon>
@@ -46,7 +50,6 @@
       </h5>
     </div>
     <div class="flex items-center gap-4 text-white text-[1.3em]">
-      <fa-icon [icon]="faHeart"></fa-icon>
       <fa-icon [icon]="faShoppingCart"></fa-icon>
     </div>
   </div>
