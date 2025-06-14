@@ -7,8 +7,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { CategoriesStoreItem } from '../services/category/categories.storeItem';
 import { SearchKeyword } from '../types/searchKeyword.type';
-import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import {
+  NavigationEnd,
+  Router,
+  RouterLink,
+  RouterModule,
+} from '@angular/router';
 import { filter } from 'rxjs';
+import { CartStoreItem } from '../services/cart/cart.storeItem';
 
 @Component({
   selector: 'app-header',
@@ -26,7 +32,8 @@ export class HeaderComponent {
 
   constructor(
     public categoryStore: CategoriesStoreItem,
-    private router: Router
+    private router: Router,
+    public cart: CartStoreItem
   ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
@@ -40,5 +47,9 @@ export class HeaderComponent {
       categoryId: parseInt(categoryId),
       keyword: keyword,
     });
+  }
+
+  navigateToCart(): void {
+    this.router.navigate(['home/cart']);
   }
 }
