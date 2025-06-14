@@ -8,6 +8,9 @@ import { ProductsService } from './services/product/products.service';
 import { SearchKeyword } from './types/searchKeyword.type';
 import { RouterOutlet } from '@angular/router';
 import { CartStoreItem } from './services/cart/cart.storeItem';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
+import { UserService } from './services/user/user.service';
 
 @Component({
   selector: 'app-home',
@@ -17,22 +20,32 @@ import { CartStoreItem } from './services/cart/cart.storeItem';
   providers: [
     CategoryService,
     CategoriesStoreItem,
-    ProductsService,
     ProductsStoreItem,
+    ProductsService,
     CartStoreItem,
+    UserService,
   ],
 })
 export class HomeComponent {
   constructor(
     private categoriesStoreItem: CategoriesStoreItem,
-    private productsStoreItem: ProductsStoreItem
+    private productsStoreItem: ProductsStoreItem,
+    private router: Router
   ) {
     this.categoriesStoreItem.loadCategories();
     this.productsStoreItem.loadProducts();
+
+    router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event) => {
+        if ((event as NavigationEnd).url === '/home') {
+          router.navigate(['/home/products']);
+        }
+      });
   }
 
-  onSelectCategory(maincategoryid: number): void {
-    this.productsStoreItem.loadProducts({ maincategoryid: maincategoryid });
+  onSelectCategory(mainCategoryId: number): void {
+    this.productsStoreItem.loadProducts({ maincategoryid: mainCategoryId });
   }
   onSearchKeyword(searchKeyword: SearchKeyword): void {
     this.productsStoreItem.loadProducts({
