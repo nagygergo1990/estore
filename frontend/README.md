@@ -1,6 +1,21 @@
-# Frontend
+# 🛒 Estore Frontend
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+
+## ⚙️ Technologies Used
+
+- Angular 18+
+- TypeScript
+- Angular HTTP Client
+- Angular Forms
+- Tailwind CSS
+- RxJS with Signals
+
+## ⚙️ Setup
+
+git clone https://github.com/nagygergo1990/estore.git
+cd frontend
+npm install
 
 ## Development server
 
