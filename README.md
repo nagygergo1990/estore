@@ -5,7 +5,7 @@ It features user registration, product categories, keyword-based search, and a s
 
 # 🛒 Prerequisites
 
-Docker
+Docker  
 Docker Compose
 
 # 🚀 Setup and run
