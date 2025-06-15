@@ -13,9 +13,11 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## ⚙️ Setup
 
+```bash
 git clone https://github.com/nagygergo1990/estore.git
 cd frontend
 npm install
+```
 
 ## Development server
 

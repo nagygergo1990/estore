@@ -12,12 +12,16 @@ Docker Compose
 
 ## 1. Clone repository
 
-git clone https://github.com/nagygergo1990/estore.git  
+```bash
+git clone https://github.com/nagygergo1990/estore.git
 cd estore
+```
 
 ## 2. Start the Docker containers
 
+```bash
 docker-compose up -d
+```
 
 ## 3. Access the app
 

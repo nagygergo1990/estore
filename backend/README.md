@@ -11,10 +11,14 @@
 
 ## ⚙️ Setup
 
+```bash
 git clone https://github.com/nagygergo1990/estore.git
 cd backend
 npm install
+```
 
 ## 🚀 Run
 
+```bash
 node app.js
+```
