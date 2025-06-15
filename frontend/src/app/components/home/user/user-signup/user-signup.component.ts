@@ -29,8 +29,6 @@ export class UserSignupComponent {
         lastName: [''],
         address: [''],
         city: [''],
-        state: [''],
-        pin: [''],
         email: ['', [Validators.required, Validators.email]],
         password: ['', Validators.required],
         confirmPassword: ['', Validators.required],
