@@ -9,10 +9,17 @@ import { RouterLink } from '@angular/router';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { CartStoreItem } from '../home/services/cart/cart.storeItem';
 import { Product } from '../home/types/product';
+import { HungarianCurrencyPipe } from '../../shared/huf.pipe';
 
 @Component({
   selector: 'app-products',
-  imports: [CommonModule, RatingsComponent, FontAwesomeModule, RouterLink],
+  imports: [
+    CommonModule,
+    RatingsComponent,
+    FontAwesomeModule,
+    RouterLink,
+    HungarianCurrencyPipe,
+  ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
 })

@@ -8,10 +8,16 @@ import { Product } from '../types/product';
 import { CartStoreItem } from '../services/cart/cart.storeItem';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HungarianCurrencyPipe } from '../../../shared/huf.pipe';
 
 @Component({
   selector: 'app-product-details',
-  imports: [RatingsComponent, CommonModule, FontAwesomeModule],
+  imports: [
+    RatingsComponent,
+    CommonModule,
+    FontAwesomeModule,
+    HungarianCurrencyPipe,
+  ],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css',
 })

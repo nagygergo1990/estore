@@ -16,6 +16,7 @@ import {
 } from '@angular/forms';
 import { LoggedInUser } from '../types/user.type';
 import { UserService } from '../services/user/user.service';
+import { HungarianCurrencyPipe } from '../../../shared/huf.pipe';
 
 @Component({
   selector: 'app-cart',
@@ -24,6 +25,7 @@ import { UserService } from '../services/user/user.service';
     CommonModule,
     RatingsComponent,
     ReactiveFormsModule,
+    HungarianCurrencyPipe,
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css',
