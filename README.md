@@ -12,7 +12,7 @@ Docker Compose
 
 ## 1. Clone repository
 
-git clone https://github.com/nagygergo1990/estore.git
+git clone https://github.com/nagygergo1990/estore.git  
 cd estore
 
 ## 2. Start the Docker containers
@@ -21,19 +21,19 @@ docker-compose up -d
 
 ## 3. Access the app
 
-Frontend: http://localhost:4200
-Backend API: http://localhost:5001
-phpMyAdmin: http://localhost:8080
+Frontend: http://localhost:4200  
+Backend API: http://localhost:5001  
+phpMyAdmin: http://localhost:8080  
 MySQL: localhost:3306
 
 ### Database connection
 
-Host: localhost:3306
-Database: estore
-Username: root
+Host: localhost:3306  
+Database: estore  
+Username: root  
 Password: admin
 
 phpMyAdmin:
-URL: http://localhost:8080
-Username: root
+URL: http://localhost:8080  
+Username: root  
 Password: admin
